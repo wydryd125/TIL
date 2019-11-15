@@ -30,20 +30,24 @@ print(reverseNum(a: 1234))
   ex) true - 123, 310, 369   /  false - 100, 222, 770 */
 
 
-//func inputNum(aa: Int) -> Bool {
-//
-//    let str = String(aa)
-//    var temp = String(){
-//
-//        for i in str {
-//            if i ==
-//
-//        }
-//    }
-//}
-//inputNum(aa: 123,456,789)
-//
-//
+func inputNum(aa: Int) -> Bool {
+    
+    let str1 = String(aa)
+    var temp1 = Array<Character>()
+    for i in str1 {
+        temp1.append(i)
+        }
+    if temp1[0] == temp1[1] || temp1[0] == temp1[2] || temp1[1] == temp1[2] {
+        return false
+        
+    } else {
+        return true
+    }
+}
+          
+print(inputNum(aa: 122))
+
+
 
 /* [ 도전 과제 ]
 - 주어진 문자 배열에서 중복되지 않는 문자만을 뽑아내 배열로 반환해주는 함수
