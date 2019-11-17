@@ -1,4 +1,4 @@
- ![애플로고](https://t1.daumcdn.net/150x150/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/P9h/image/sR7PN1eZ70y5YgfR0zmcvqJNgSg.jpg)
+ ![애플로고](https://t1.daumcdn.net/150x150/https://t1.daumcdn.netthumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/P9h/image/sR7PN1eZ70y5YgfR0zmcvqJNgSg.jpg)
 
 # TIL
 ## Today I Learned 
