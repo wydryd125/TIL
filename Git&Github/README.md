@@ -1,18 +1,5 @@
 # TIL
 ## Today I Learned 
  
-화이팅!! 💪🏻🐹
-
-
-### swift
+ ### Git&Github 사용방법 정리
  
- - 스위프트를 공부합시다.
- 
- ### Git&Github
- 
- - Git&Github를 공부합시다.
- 
- ### Markdown
- 
- - Markdown 문법을 공부합시다.
-
