@@ -1,4 +1,4 @@
-![애플로고](https://brunch.co.kr/@ultra0034/54)
+![애플로고](https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/P9h/image/sR7PN1eZ70y5YgfR0zmcvqJNgSg.jpg)
 
 # TIL
 ## Today I Learned 
