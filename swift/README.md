@@ -35,4 +35,8 @@
 - OOP 2 
 1. Acess Control
 2. OOP 4대 특징
+-----------------------
+### 2019.11.21
+Life Cycle
+Xcode 실습 (UIButton, UILabel 활용)
 
