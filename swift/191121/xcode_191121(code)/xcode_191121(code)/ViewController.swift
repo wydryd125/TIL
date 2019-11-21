@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     let number = UILabel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
