@@ -44,12 +44,17 @@
 --------------------------
 ### 2019.11.22
 
-- UI Guide
-- UI ViewContent
+- UIGuide
+- UIViewContent
 -------------------------
 ### 2019.11.25
 
-- UI ViewContoroller
+- UIViewContoroller
+-------------------------
+### 2019.1126
+
+- UITextfield
+- UIAlert Controller
 
 
 
