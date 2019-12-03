@@ -56,7 +56,9 @@
 - UITextfield
 - UIAlert Controller
 -----------------------
+### 2019.12.03
 
-
+- StoryBoard & Segue
+-----------------------
 
 
