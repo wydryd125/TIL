@@ -60,5 +60,9 @@
 
 - StoryBoard & Segue
 -----------------------
+### 2019.12.05
+
+- Type Casting
+- Initializer
 
 
