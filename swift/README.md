@@ -64,5 +64,9 @@
 
 - Type Casting
 - Initializer
+----------------------
+### 2019.12.06
 
-
+- Singletone
+- UserDefaults
+-----------------------
