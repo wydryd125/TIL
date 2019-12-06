@@ -39,6 +39,9 @@ if let task2 = task1 as? Int {
  (addTwoValues의 각 파라미터에는 원하는 값 입력)
  task2 + task2 */
 
+
+
+
 /* 2.
  class Car {}
  let values: [Any] = [
