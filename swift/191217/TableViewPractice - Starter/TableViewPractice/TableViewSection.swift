@@ -20,9 +20,9 @@ final class TableViewSection: UIViewController {
     
     override var description: String { "Practice 2 - Section" }
     
-    let data = [5, 7, 16, 19, 22, 29, 30, 39, 44, 48, 50]
+//    let data = [5, 7, 16, 19, 22, 29, 30, 39, 44, 48, 50]
     var resultDict = [Int: [Int]]()
-//    let data = Array(0...100)
+    let data = Array(0...100)
     var keys = [Int]()
     
     override func viewDidLoad() {
@@ -69,7 +69,7 @@ extension TableViewSection: UITableViewDataSource {
         let value = resultDict[key]!
         return value.count
         
-//        return resultDict[keys[section]]!.count
+        return resultDict[keys[section]]!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
