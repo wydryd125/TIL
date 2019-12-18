@@ -6,6 +6,8 @@
 //  Copyright © 2019 정유경. All rights reserved.
 //
 
+// !!!!!!!!!!!모드 바뀔때마다!!!!!!!!!!!!!!!!!!!!
+
 import UIKit
 
 class ViewController: UIViewController {
