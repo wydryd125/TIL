@@ -19,7 +19,7 @@ AutolayoutPractice
 `````````````````````````````````````````````
 <img width="452" alt="스크린샷 2019-12-18 오후 2 46 56" src="https://user-images.githubusercontent.com/57229970/71059642-abde9400-21a6-11ea-8ef5-96a87022c80d.png">
 
-<img width="452" alt="스크린샷 2019-12-18 오후 2 46 56" src="https://user-images.githubusercontent.com/57229970/71059642-abde9400-21a6-11ea-8ef5-96a87022c80d.png">
+<img width="786" alt="스크린샷 2019-12-18 오후 2 47 03" src="https://user-images.githubusercontent.com/57229970/71060358-9bc7b400-21a8-11ea-99fa-59cfa2241821.png">
 
 
 
