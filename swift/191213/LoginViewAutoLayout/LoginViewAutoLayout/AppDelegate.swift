@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  loginView
+//  LoginViewAutoLayout
 //
-//  Created by 정유경 on 2019/12/16.
+//  Created by 정유경 on 2019/12/18.
 //  Copyright © 2019 정유경. All rights reserved.
 //
 
