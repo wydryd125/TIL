@@ -4,6 +4,17 @@
 
 ### 2019.12.06
 
+````````````````````````
+userdefaults191206
+
+- switch on,off 변경될 때 마다 이미지 변경하기
+- 어플 다시 시작해도 마지막 정보, 화면 유지하기
+`````````````````````````````````
+<img width="452" alt="스크린샷 2019-12-18 오후 3 49 33" src="https://user-images.githubusercontent.com/57229970/71062516-0cbd9a80-21ae-11ea-843d-d82ecd3e47f1.png">
+
+<img width="452" alt="스크린샷 2019-12-18 오후 3 49 37" src="https://user-images.githubusercontent.com/57229970/71062529-13e4a880-21ae-11ea-9909-d5bc74b81499.png">
+
+
 `````````````````````
 singletoneex191206
 
