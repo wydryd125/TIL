@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let myView = LoginView(frame: .zero)
     let mail = "Yukyung"
     let pass = "1234"
+    var tempText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,8 @@ class ViewController: UIViewController {
         
         if mail == myView.mailTextField.text, pass == myView.passTextField.text {
             
+            UserDefaults.standard.set(mail, forKey: "mail")
+            
             let vc = SecondViewController()
             present(vc, animated: true)
             
@@ -45,12 +48,26 @@ class ViewController: UIViewController {
         } else {
             myView.mailTextField.backgroundColor = .red
             myView.passTextField.backgroundColor = .red
+            
+            UIView.animate(withDuration: 1.5) {
+                self.myView.mailTextField.backgroundColor = .white
+                self.myView.passTextField.backgroundColor = .white
+            }
         }
-        
     }
 }
     
 extension ViewController: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        
+        if text.count > 16 {
+            textField.text = tempText
+        } else {
+            tempText = text
+        }
+    }
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
         UIView.animate(withDuration: 0.3) {
