@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  LoginViewAutoLayout
 //
 //  Created by 정유경 on 2019/12/21.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+//-> 회원가입 뷰
+class SignUpViewController: UIViewController {
     
     let emailTextField = UITextField()
     let emailLine = UILabel()
@@ -120,7 +121,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    
+    //-> 회원가입창의 alert생성 - message: String 한 이유는 조건에 따라 경고메세지가 달라야하기 떄문엥에에ㅔ에엥
     func alert(message: String) {
         let alertController = UIAlertController(title: "경고", message: message, preferredStyle: .alert)
         
@@ -132,11 +133,13 @@ class LoginViewController: UIViewController {
     
     
     @objc func signUpButtonDidTap() {
+        //-> 조건1 - 이메일텍스트필드가 비어있는지 확인
         guard let email = emailTextField.text, !email.isEmpty else {
             alert(message: "이메일을 입력해주세요")
             return
         }
         
+        //-> 조건2 - 패스워드1,2 텍스트필드가 비어있는지 확인
         guard
             let pass1 = passTextField.text,
             !pass1.isEmpty,
@@ -147,17 +150,19 @@ class LoginViewController: UIViewController {
             return
         }
         
+        //-> 조건3 - 패스1과 2의 글자수가 4~16가 아닐때
         guard 4...16 ~= pass1.count, 4...16 ~= pass2.count  else {
             alert(message: "비밀번호는 4자이상 16자 이하 입력 가능합니다")
             return
         }
         
-        
+        //-> 조건4 - 패스1과 패스2가 맞지 않을때
         guard pass1 == pass2 else {
             alert(message: "비밀번호가 틀립니다")
             return
         }
         
+        //-> 조건이 다 틀리면(=회원가입 정보가 다 맞으면) 유저디폴트에 정보를 저장
         UserDefaults.standard.set(pass1, forKey: email)
         
         dismiss(animated: true)

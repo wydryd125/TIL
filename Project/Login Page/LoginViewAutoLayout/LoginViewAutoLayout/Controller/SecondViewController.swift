@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//-> 로그인 되었을때의 뷰
 class SecondViewController: UIViewController {
     
     let loginLabel = UILabel()

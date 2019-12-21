@@ -8,6 +8,7 @@
 
 import UIKit
 
+//뷰에 보여질 UI setting!!!
 class LoginView: UIView {
     
     let logoImageView = UIImageView()
@@ -23,6 +24,7 @@ class LoginView: UIView {
     let signInButton = UIButton()
     let signUpButton = UIButton()
     
+    //-> 버튼의 constraint를 통해 높이 조절을 하기 위함. autolayout에서 버튼의 constraint를 저장, 그리고 텍스트필드 선택시 위치를 조정하는 애니메이션을 활용하는데 사용함.
     var buttonConstraint: NSLayoutConstraint?
 
     override init(frame: CGRect) {
@@ -124,8 +126,11 @@ class LoginView: UIView {
     // 버튼
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        
+        // -> 버튼의 bottom constratint를 저장함. 사용위치는 viewController에서 사용.
         buttonConstraint = signInButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100)
         buttonConstraint?.isActive = true
+        
         signInButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
         signInButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
