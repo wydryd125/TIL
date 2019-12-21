@@ -3,8 +3,8 @@
 
 
 ### 2019.12.13
-- Login Page
-
+- login view
+`
 ```````````````````````
 login - code
 login - Autolayout
@@ -28,10 +28,12 @@ login - Autolayout
 2. 회원 가입 페이지
 회원가입 페이지를 만든 뒤 회원 가입한 유저의 아이디와 비밀번호를 추가하고
 그것으로도 로그인 할 수 있도록 구현하기
+
 `````````````````````````````````````````````
+<img width="452" alt="스크린샷 2019-12-21 오후 5 50 44" src="https://user-images.githubusercontent.com/57229970/71305660-ae492400-241a-11ea-86de-2fe52611cb49.png">
 
+<img width="452" alt="스크린샷 2019-12-21 오후 5 51 30" src="https://user-images.githubusercontent.com/57229970/71305672-bef99a00-241a-11ea-82d9-07e0ef7c8954.png">
 
+<img width="452" alt="스크린샷 2019-12-21 오후 5 51 49" src="https://user-images.githubusercontent.com/57229970/71305678-d20c6a00-241a-11ea-9a8d-c2fe38f7c408.png">
 
-
-![로그인 페이지 예시](https://user-images.githubusercontent.com/57229970/70999836-88233b80-211d-11ea-8f00-4947aca34f20.png)
 
