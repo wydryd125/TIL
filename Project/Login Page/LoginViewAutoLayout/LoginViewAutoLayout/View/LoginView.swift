@@ -21,6 +21,7 @@ class LoginView: UIView {
     let passTextField = UITextField()
     let passLine = UILabel()
     let signInButton = UIButton()
+    let signUpButton = UIButton()
     
     var buttonConstraint: NSLayoutConstraint?
 
@@ -60,7 +61,11 @@ class LoginView: UIView {
         signInButton.layer.cornerRadius = 8
         self.addSubview(signInButton)
     
-//        passImageView.contentMode = .scaleAspectFill
+        signUpButton.backgroundColor = .white
+        signUpButton.titleLabel?.font = .systemFont(ofSize: 15, weight: .medium)
+        signUpButton.setTitleColor(.darkGray, for: .normal)
+        signUpButton.setTitle("Sign Up!", for: .normal)
+        self.addSubview(signUpButton)
         
         
         mailImageView.contentMode = .scaleAspectFill
@@ -83,6 +88,7 @@ class LoginView: UIView {
         
         passTextField.placeholder = "비밀번호를 입력해주세요."
         addSubview(passTextField)
+        
     }
     
     func autoLayout() {
@@ -122,6 +128,14 @@ class LoginView: UIView {
         buttonConstraint?.isActive = true
         signInButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
         signInButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        
+    // 회원가입 버튼
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
+        signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 30).isActive = true
+        signUpButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50).isActive = true
+        signUpButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        signUpButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
         
     // 패스워드이미지
         passImageView.translatesAutoresizingMaskIntoConstraints = false
