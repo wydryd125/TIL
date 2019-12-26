@@ -13,38 +13,69 @@ import Foundation
 func performClosure(param: (String) -> Int) {
   param("Swift")
 }
-
-//클로저 시작~~~
-performClosure(param: { (str: String) -> Int in
-  return str.count
+performClosure(param: {(str: String) -> Int in
+    return str.count
 })
 
-// Int로 리턴받을 걸 아니까 생략
-performClosure(param: { (str: String) in
-  return str.count
+performClosure (param: {(str: String)  in
+    return str.count
 })
 
-// 클로저로 넘어오는 걸 string인 것을 알기 때문에 str이라고 명시만 하면됨
 performClosure(param: { str in
-  return str.count
+    return str.count
 })
 
-// 넘어오는게 하나여서 $0으로 사용가능
 performClosure(param: {
-  return $0.count
+    return $0.count
 })
 
-// 한줄일땐 리턴 생략가능
 performClosure(param: {
-  $0.count
+    $0.count
 })
 
-// 받는게 하나밖에 없기때문에 생략가능
-performClosure() {
-  $0.count
-}
-// 받는게 하나여서 소괄호 생략가능
+performClosure(){ $0.count }
+
 performClosure { $0.count }
+
+
+
+
+
+
+
+
+
+////클로저 시작~~~
+//performClosure(param: { (str: String) -> Int in
+//  return str.count
+//})
+//
+//// Int로 리턴받을 걸 아니까 생략
+//performClosure(param: { (str: String) in
+//  return str.count
+//})
+//
+//// 클로저로 넘어오는 걸 string인 것을 알기 때문에 str이라고 명시만 하면됨
+//performClosure(param: { str in
+//  return str.count
+//})
+//
+//// 넘어오는게 하나여서 $0으로 사용가능
+//performClosure(param: {
+//  return $0.count
+//})
+//
+//// 한줄일땐 리턴 생략가능
+//performClosure(param: {
+//  $0.count
+//})
+//
+//// 받는게 하나밖에 없기때문에 생략가능
+//performClosure() {
+//  $0.count
+//}
+//// 받는게 하나여서 소괄호 생략가능
+//performClosure { $0.count }
 
 
 /*
