@@ -116,7 +116,10 @@
 
 - Gesture Rescogonizer
 ----------------------
+### 2020.01.09
 
-
+- Map Kit
+- Core Location
+------------------------
 
 
