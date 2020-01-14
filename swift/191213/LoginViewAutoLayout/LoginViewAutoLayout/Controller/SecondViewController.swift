@@ -28,7 +28,7 @@ class SecondViewController: UIViewController {
             loginLabel.text = "반가워요! \(email)🐹"
         }
         loginLabel.font = .systemFont(ofSize: 30, weight: .heavy)
-        loginLabel.backgroundColor = #colorLiteral(red: 0.3054754056, green: 0.4068715089, blue: 0.8318527919, alpha: 1)
+        loginLabel.backgroundColor = #colorLiteral(red: 0.5065971017, green: 0.9183780551, blue: 0.6878851056, alpha: 1)
         loginLabel.textColor = .white
         loginLabel.textAlignment = .center
         view.addSubview(loginLabel)
