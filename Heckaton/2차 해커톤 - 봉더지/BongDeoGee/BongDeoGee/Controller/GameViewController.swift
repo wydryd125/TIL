@@ -10,9 +10,17 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    let randomBounsFrame = [
+    CGRect(x: 60, y: 80, width: 110, height: 110),
+    CGRect(x: 30, y: 150, width: 90, height: 90),
+    CGRect(x: 320, y: 120, width: 100, height: 100),
+    CGRect(x: 260, y: 360, width: 90, height: 90),
+    CGRect(x: 90, y: 700, width: 90, height: 90),
+    CGRect(x: 280, y: 780, width: 100, height: 100)
+    ]
+
   var itemCount = 3
   var setTime = 0.8
-  
   var tempIndexPath: Int?
   
   var bbongsStatus = false
@@ -22,7 +30,8 @@ class GameViewController: UIViewController {
       currentScoreView.scoreText = newValue
     }
   }
-  
+  var bonusWordImage = UIImageView()
+  var bonusButton = UIButton()
   var gameTimer = Timer()
   var itemTimer = Timer()
   
@@ -44,18 +53,18 @@ class GameViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    backgroundViewUI()
+    
     collectionViewUI()
     autolayout()
+    backgroundViewUI()
     collectionView.allowsMultipleSelection = false
     controlAction()
   }
   
   private func controlAction() {
     controlView.startButton.addTarget(self, action: #selector(didControlAction(_:)), for: .touchUpInside)
-//    controlView.cancelButton.addTarget(self, action: #selector(didControlAction(_:)), for: .touchUpInside)
+
   }
-  
     var isState = true
   @objc func didControlAction(_ button: UIButton) {
     switch button {
@@ -106,6 +115,14 @@ class GameViewController: UIViewController {
     } else {
       randomPopUp()
     }
+    
+    let temp = [1, 2, 5, 7]
+    if sec % 3 == temp.randomElement() {
+        print(sec)
+        randomBonus()
+    } else {
+        bonusButton.isHidden = true
+    }
   }
   
   private func makeItemCount() -> [Int] {
@@ -115,6 +132,8 @@ class GameViewController: UIViewController {
     }
     return array
   }
+    
+    
   
   private func bbongsPopUp() {
     guard let intIndex = makeItemCount().randomElement() else { return }
@@ -126,6 +145,7 @@ class GameViewController: UIViewController {
       bbongsStatus = true
     }
   }
+
   
   private func randomPopUp() {
     let indexPath = randomIndex()
@@ -168,7 +188,37 @@ class GameViewController: UIViewController {
     
     misBackgroundView.backgroundColor = #colorLiteral(red: 0.5560160216, green: 0.1580937134, blue: 0.1131936957, alpha: 1).withAlphaComponent(0.3)
     misBackgroundView.alpha = 0
+    
+    bonusButton.setImage(UIImage(named: "보너스"), for: .normal)
+    bonusButton.imageView?.contentMode = .scaleAspectFit
+    bonusButton.addTarget(self, action: #selector(bonusButtonDidTap), for: .touchUpInside)
+    view.addSubview(bonusButton)
+    
+    bonusWordImage.image = UIImage(named: "보너스문구")
+    bonusWordImage.contentMode = .scaleAspectFill
+    bonusWordImage.alpha = 0
+    
   }
+    
+    @objc func bonusButtonDidTap() {
+        score += 300
+        UIView.animate(
+            withDuration: 0.25,
+            delay: 0,
+            options: [.autoreverse],
+            animations: {
+                self.bonusWordImage.alpha = 1
+                self.bonusWordImage.transform = self.bonusWordImage.transform.scaledBy(x: 1.3, y: 1.3)
+                self.bonusWordImage.alpha = 0
+        })
+        
+    }
+    
+    func randomBonus() {
+        guard let tempRandomFrame = randomBounsFrame.randomElement() else { return }
+        bonusButton.frame = tempRandomFrame
+        bonusButton.isHidden = false
+    }
   
   private func autolayout() {
     let guide = view.safeAreaLayoutGuide
@@ -186,7 +236,6 @@ class GameViewController: UIViewController {
     misBackgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     misBackgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     misBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    
     
     view.addSubview(currentScoreView)
     currentScoreView.translatesAutoresizingMaskIntoConstraints = false
@@ -209,6 +258,14 @@ class GameViewController: UIViewController {
     collectionView.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
     collectionView.bottomAnchor.constraint(equalTo: controlView.topAnchor).isActive = true
     collectionView.heightAnchor.constraint(equalTo: guide.heightAnchor, multiplier: 0.55).isActive = true
+   
+    view.addSubview(bonusWordImage)
+    bonusWordImage.translatesAutoresizingMaskIntoConstraints = false
+    bonusWordImage.topAnchor.constraint(equalTo: guide.topAnchor, constant: 120).isActive = true
+    bonusWordImage.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -100).isActive = true
+    bonusWordImage.widthAnchor.constraint(equalToConstant: 160).isActive = true
+    bonusWordImage.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    
   }
 }
 
@@ -232,6 +289,8 @@ extension GameViewController: CustomCollectionCellDelegate {
       print("dodo")
     case UIImage(named: "봉쓰"):
       print("Fire")
+    case UIImage(named: "보너스"):
+        print("Bonus")
     case UIImage(named: "두더지없음"):
         if gameTimer.isValid == true {
             misBackgroundView.alpha = 1
@@ -244,52 +303,52 @@ extension GameViewController: CustomCollectionCellDelegate {
             break
     }
   }
-  
-  func cellChangeAction(isSelected: Bool, cell: CustomCollectionCell) {
-    if isSelected {
-      if bbongsStatus {
-        cell.imageView.image = UIImage(named: "봉쓰")
-        cell.imageView.contentMode = .scaleAspectFit
-      } else {
-        cell.imageView.image = UIImage(named: "두더지")
-         cell.imageView.contentMode = .scaleAspectFill
-      }
-    } else {
-      cell.imageView.image = UIImage(named: "두더지없음")
-         cell.imageView.contentMode = .scaleAspectFill
+    
+    func cellChangeAction(isSelected: Bool, cell: CustomCollectionCell) {
+        if isSelected {
+            if bbongsStatus {
+                cell.imageView.image = UIImage(named: "봉쓰")
+                cell.imageView.contentMode = .scaleAspectFit
+            } else   {
+                cell.imageView.image = UIImage(named: "두더지")
+                cell.imageView.contentMode = .scaleAspectFill
+            }
+        } else {
+            cell.imageView.image = UIImage(named: "두더지없음")
+            cell.imageView.contentMode = .scaleAspectFill
+        }
     }
-  }
     
     func reStartTimer() {
         gameTimer.fire()
         itemTimer.fire()
     }
-  
-  func buttonAction(cell: CustomCollectionCell) {
-    guard
-      let tapIndexPath = collectionView.indexPath(for: cell),
-      let selectIndexPath = collectionView.indexPathsForSelectedItems?.first
-      else { return }
-
-    if tapIndexPath == selectIndexPath {
-      switch cell.imageView.image {
-      case UIImage(named: "두더지"):
-        score += 100
-      case UIImage(named: "봉쓰"):
-        score = 0
-        gameTimer.invalidate()
-        itemTimer.invalidate()
-        let fireVC = FirebongViewController()
-        fireVC.modalPresentationStyle = .overCurrentContext
-        present(fireVC, animated: false)
-        reStartTimer()
-
-      default:
-        break
-      }
-    } else {
-      score -= 100
-    }
     
-  }
+    func buttonAction(cell: CustomCollectionCell) {
+        guard
+            let tapIndexPath = collectionView.indexPath(for: cell),
+            let selectIndexPath = collectionView.indexPathsForSelectedItems?.first
+            else { return }
+        
+        if tapIndexPath == selectIndexPath {
+            switch cell.imageView.image {
+            case UIImage(named: "두더지"):
+                score += 100
+            case UIImage(named: "봉쓰"):
+                score = 0
+                gameTimer.invalidate()
+                itemTimer.invalidate()
+                let fireVC = FirebongViewController()
+                fireVC.modalPresentationStyle = .overCurrentContext
+                present(fireVC, animated: false)
+                reStartTimer()
+                
+            default:
+                break
+            }
+        } else {
+            score -= 100
+        }
+        
+    }
 }
