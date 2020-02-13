@@ -41,7 +41,7 @@ class GameOverViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    //enter, startbutton
     @objc func didTabButton(_ button: UIButton) {
         switch levelIdx {
         case 0:
@@ -59,9 +59,10 @@ class GameOverViewController: UIViewController {
         default:
             break
         }
-        
+        //종료버튼이면
         if button == endButton {
-            self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+           // 네번째 뷰이기 때문에 프레젠팅 3과, dismiss
+        self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         } else {
             if startButton.imageView?.image == UIImage(named: "다음") {
                 self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -70,11 +71,11 @@ class GameOverViewController: UIViewController {
             }
         }
     }
-    
+    //()안에 파라미터를 만들어주면 가져와서 사용할수 있음.
     private func setUI(level: Double, score: Int) {
-        switch levelIdx+1 {
+        switch levelIdx + 1 {
         case 1:
-            if score < 500 {
+            if score < 1000 {
                 statusLabel.text = "아쉽네요 재도전!"
                 startButton.setImage(UIImage(named: "재도전"), for: .normal)
                 minusLabel.text = "부족한 점수 : " + "\(1000-userScore)"
@@ -99,20 +100,20 @@ class GameOverViewController: UIViewController {
                 startButton.setImage(UIImage(named: "다음"), for: .normal)
             }
         default:
-            statusLabel.text = "aa"
-        }
-        
-        switch userLevel {
-        case GameSet.level1.interval:
-            levelLabel.text = GameSet.level1.toString
-        case GameSet.level1.interval:
-            levelLabel.text = GameSet.level2.toString
-        case GameSet.level1.interval:
-            levelLabel.text = GameSet.level3.toString
-        default:
             break
         }
-        
+//
+//        switch userLevel {
+//        case GameSet.level1.interval:
+//            levelLabel.text = GameSet.level1.toString
+//        case GameSet.level1.interval:
+//            levelLabel.text = GameSet.level2.toString
+//        case GameSet.level1.interval:
+//            levelLabel.text = GameSet.level3.toString
+//        default:
+//            break
+//        }
+//        
         backgroundView.image = UIImage(named: "결과배경")
         backgroundView.contentMode = .scaleToFill
         
@@ -174,43 +175,4 @@ class GameOverViewController: UIViewController {
         startButton.heightAnchor.constraint(equalTo: backgroundView.heightAnchor, multiplier: 0.2).isActive = true
         startButton.widthAnchor.constraint(equalTo: backgroundView.widthAnchor, multiplier: 0.4).isActive = true
     }
-    
-    //    private func uploadToDatabase() {
-    //
-    //        let values = ["userName": staticName ?? "noname",
-    //                                 "userScore": "\(userScore)" ?? "0",
-    //                                 "userLevel": "\(userLevel)" ?? "0",
-    //                       ] as [String : Any]
-    //
-    //
-    //        Database.database().reference().child("\(staticName)").setValue(values) { (error, ref) in
-    //            if error != nil {
-    //                print("Success Upload To Database")
-    //                print(ref)
-    //            }
-    //        }
-    //
-    //        allLoadFromDatabase()
-    //}
-    //
-    //    private func allLoadFromDatabase() {
-    //
-    //        var upperNameArray: Array<String> = []
-    //
-    //        Database.database().reference().observeSingleEvent(of: .value) { (snapshop) in
-    //            upperNameArray = snapshop.value as? [String] ?? ["wrongName"]
-    //
-    //        }
-    //
-    //        for name in upperNameArray {
-    //            Database.database().reference().child(name).observeSingleEvent(of: .value) { (snapshop) in
-    //            let data = snapshop.value as? [String:Any] ?? ["fail":"fail"]
-    //            guard let name = data["userName"] as? String else { return }
-    //            guard let score = data["userScore"] as? String else {return }
-    //            guard let level = data["userLevel"] as? String else { return }
-    //            }
-    //
-    //        }
-    //
-    //    }
 }

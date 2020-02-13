@@ -30,28 +30,21 @@ enum GameSet {
     }
 }
 
-
+//랭킹을 유저디폴트에 저장하기 위해 만들었으나 사용하지 않음.
 class SaveRank {
     
     class func addKeys(name: String) {
         guard var keys = UserDefaults.standard.object(forKey: "keys") as? [String] else { return }
         guard !keys.contains(name) else { return }
         keys.append(name)
-        
     }
-    
     class func getKeys() -> [String] {
         UserDefaults.standard.object(forKey: "keys") as? [String] ?? [String]()
     }
-    
-    
-    
-    
     class func set(name: String, level: Int, score: Int) {
         let key = name + String(level)
         UserDefaults.standard.set(score, forKey: key) // 업스3
     }
-    
     class func get(name: String, level: Int) -> Int {
         let key = name + String(level)
         
