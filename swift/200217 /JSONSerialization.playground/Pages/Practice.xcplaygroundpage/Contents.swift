@@ -122,21 +122,27 @@ func practice3() {
             response.mimeType == "application/json" else { return }
         guard let data = data else { return print("낫데이터") }
         guard let jsonObject = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]] else { return }
+      
         
-        for json in jsonObject {
+        jsonObject.forEach { json in
+           
             if let userId = json["userId"] as? Int,
                 let id = json["id"] as? Int,
                 let title = json["title"] as? String,
                 let body = json["body"] as? String {
                 print(Post.init(userId: userId, id: id, title: title, body: body))
-            }
+    
         }
+        
+        }
+
         print(jsonObject.count)
     }
     dataTask.resume()
 }
 
 practice3()
+
 
 
 
