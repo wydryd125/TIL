@@ -9,7 +9,7 @@
 > - SwiftUI는 Declarative 구문을 사용한다
 > - 실시간으로 UI 미리보기를 제공함.
 > - UI 변수 연결인 outlets나 action등을 체크하여 런타임때의 fail의 위험을 감소
-> - 자바의 스윙, React Nativ와 같은 멀티 플랫폼 프레임워크
+> - 자바의 스윙, React Native와 같은 멀티 플랫폼 프레임워크
 
 ###  SwiftUI의 호환성
 - iOS 13,  macOS 10.15, tvOS 13, watchOS 6 이후의 운영체제에서 실행
