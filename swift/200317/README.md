@@ -30,39 +30,38 @@
 ### HIG - Apple ID Button
 - 잘 보이도록 위치 시켜야 함 -> 다른 버튼보다 작게하지 말고, 스크롤 하지 않고 보이게 할 것
 - 시스템에서 제공해주는 버튼을 사용했을 때의 이점
-> 애플에서 공인된 스타일을 사용하는 것이 보장
-> 버튼 스타일을 변경할 때 그 내용이 이상적인 비용을 유지할 것을 보장
-> 버튼의 제목을 기기에서 지정한 언어로 자동 변환
-> 보이스오버 지원
+> 1. 애플에서 공인된 스타일을 사용하는 것이 보장
+> 2. 버튼 스타일을 변경할 때 그 내용이 이상적인 비용을 유지할 것을 보장
+> 3. 버튼의 제목을 기기에서 지정한 언어로 자동 변환
+> 4. 보이스오버 지원
 
 - 다음 가이드를 따를 것
 
 <img width="599" alt="스크린샷 2020-05-12 오후 7 00 57" src="https://user-images.githubusercontent.com/57229970/81670783-127c8b00-9483-11ea-8efc-a9316050e054.png">
 
+
 ### ASAuthorizationAppleIDButton Type
 
 <img width="755" alt="스크린샷 2020-05-12 오후 7 07 06" src="https://user-images.githubusercontent.com/57229970/81671273-ca119d00-9483-11ea-9830-40b2a1aef80f.png">
+
 
 ### ASAuthorizationAppleIDButton Style
 
 <img width="622" alt="스크린샷 2020-05-12 오후 7 07 57" src="https://user-images.githubusercontent.com/57229970/81671392-e9a8c580-9483-11ea-9c17-c909f909c8cf.png">
 
+
 ### Custom Button
+
 - 커스텀 버튼은 반드시 리소스를 다운 받아서 활용할 것
-> [링크: ]( https://developer.apple.com/design/resources/)
-> 포맷: PNG, SVG, PDF
-> 왼쪽 정렬 로고 파일, 로고 온리 로고 파일
+> - 링크: [https://developer.apple.com/design/resources/]( https://developer.apple.com/design/resources/)
+> - 포맷: PNG, SVG, PDF
 
 - Guide Line
-> 애플 로고 자체를 버튼으로 사용하지 말 것
-> 로고 파일의 높이를 버튼의 높이와 맞출 것
-> 로고 파일을 자르지 말 것
-> 세로축 여백을 추가하지 말 것
-> 컷텀 컬러 사용하지 말 것
-
-
-
-
+> 1. 애플 로고 자체를 버튼으로 사용하지 말 것
+> 2. 로고 파일의 높이를 버튼의 높이와 맞출 것
+> 3. 로고 파일을 자르지 말 것
+> 4. 세로축 여백을 추가하지 말 것
+> 5. 커스텀 컬러 사용하지 말 것
 
 
 
