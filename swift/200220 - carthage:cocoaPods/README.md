@@ -105,19 +105,20 @@ $ carthage update Alamofire
 -  Xcode를 실행할 때 실행될 script를 작성하는 것
 	- Shell Script 작성
 	```
-/usr/local/bin/carthage copy-frameworks
+	/usr/local/bin/carthage copy-frameworks
 	```
+
 	- Add Input Files
 	```
 	$(SRCROOT)/Carthage/Build/iOS/{Library Name}.framework
 	```
 <img width="924" alt="스크린샷 2020-05-12 오후 8 25 58" src="https://user-images.githubusercontent.com/57229970/81680877-cc2d2900-948e-11ea-880b-1944d4c64fd7.png">
 
-### ### openSources
+### openSources
 
-> - [SnapKit]<https://github.com/SnapKit/SnapKit>
-> - [Animated Tab Bar]<https://github.com/Ramotion/animated-tab-bar>
-> - [Alamofire]<https://github.com/Alamofire/Alamofire>
+> - [SnapKit: ]<https://github.com/SnapKit/SnapKit>
+> - [Animated Tab Bar: ]<https://github.com/Ramotion/animated-tab-bar>
+> - [Alamofire: ]<https://github.com/Alamofire/Alamofire>
 
 
 
