@@ -90,7 +90,7 @@ protocol UICollectionViewDelegateFlowLayout : UICollectionViewDelegate {
 
 
 ``````````````````````````````````````````
-[ 과제 ]
+[ task ]
 > 10장의 이미지를 x 2 해서 20개 아이템으로 만들어 콜렉션뷰에 표시 (세로 방향 스크롤)
 > 각 아이템을 선택했을 때 체크 아이콘 표시 (체크 이미지 : SF Symbol - checkmark.circle.fill)
   + 선택되어 있는 느낌이 나도록 별도 효과 주기 (영상 참고, 효과는 변경 가능)
@@ -106,7 +106,6 @@ protocol UICollectionViewDelegateFlowLayout : UICollectionViewDelegate {
 
 `````````````````````````````````
 headerView, FooterView 이용하기
-
 ``````````````````````````````````````````````
 
 
