@@ -5,10 +5,12 @@
 ## 2020.01.28 - UICollectionView
 
 ### UICollectionView
+
 - 정렬된 자료들을 사용자가 원하는 형식에 맞게 유연하게 표현할 수 잇는 객체
 - UICollectionView는 UITableView 같이 dataSource 와 delegate를 이용해 데이터를 collection 형식으로 화면에 표시하는 object
 
 ### Three types of visual elements
+
 - 셀 (Cell)
 	- 컬렉션 뷰의 단일 데이터 항목을 표현하는 개체
 	- 각 셀은 다중 섹션으로 나누거나 하나의 그룹으로만 묶어 표현할 수 있음
@@ -31,6 +33,7 @@
 	- 유저가 선택할 수 없고 레이아웃 객체를 통해 정의
 
 ### UICollectionView vs UITableView
+
 - UITableView와 달리 UICollectionViewLayout object를 통해 UICollectionView 에서 cell의 위치 및 크기를 설정해야함.
 
 <img width="509" alt="스크린샷 2020-05-13 오후 5 08 28" src="https://user-images.githubusercontent.com/57229970/81787693-626b5880-953c-11ea-86bd-de27bfdcc848.png">
@@ -38,7 +41,7 @@
 ### CollectionViewLayout
 
 - UICollectionView에서 cell 및 decoration views들의 크기 및 위치를 설정하는 object. 화면에 나타내는 방법과 관련된 속성을 설정할 수 있음
-  - UICollectionView를 생성할 때 반드시 layout object를 설정해야한다.
+- UICollectionView를 생성할 때 반드시 layout object를 설정해야한다.
 
 <img width="529" alt="스크린샷 2020-05-13 오후 6 03 52" src="https://user-images.githubusercontent.com/57229970/81793271-1cb28e00-9544-11ea-8930-c1299c8f0102.png">
 
@@ -47,6 +50,7 @@
 - Scroll Direction - Vertical / Horizontal
 
 ### Secion Layout
+
 - itemSize : Cell의 크기 지정
 
 - minimumLineSpacing : Scroll direction 방향으로 cell 사이의 너비 지정 (Cell Spacing)
