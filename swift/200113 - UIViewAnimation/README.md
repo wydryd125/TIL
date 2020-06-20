@@ -1,8 +1,9 @@
 # TIL
 ## Today I Learned
 
-
 ## 2020.01.13 - UIView Animation
+
+
 
 ### UIImage Animation
 - UIImageView 에서 여러개의 UIImage에 대한 animation 설정
@@ -47,19 +48,19 @@
   - withDuration: animation이 실행되는 전체 시간
   - delay: animation이 실행되는 시간. 0 이상 값을 주면 실행 시간이 늦춰짐
   - animations: animation 적용
-  -  usingSpringWithDamping: 
-    1. 기본값 1, 진동없이 정확히 목표치에 도달
-    2. 1 보다 작을 경우, 목표치에 도달하기까지 진동을 더 많이 함
-    3. 1보다 클 경우, 목표치에 도달하기 전에 끝남
+  - usingSpringWithDamping: 
+    - 기본값 1, 진동없이 정확히 목표치에 도달
+    - 1 보다 작을 경우, 목표치에 도달하기까지 진동을 더 많이 함
+    - 1보다 클 경우, 목표치에 도달하기 전에 끝남
   - initialSpringVelocity: 기본값 0, 처음에 밀려오는 속도를 조정.
   - option: 자연스러운 animation을 위한 option 
-    1. curveLinear: 처음부터 끝까지 동일한 속도, motion으로 실행
-    2. curveEaseIn: 천천히 출발해서 빠르게 도착
-    3. curveEaseOut: 빠르게 출발해서 천천히 도착
-    4. curveEaseInOut: 기본값, 천천히 출발해서 빨라지다가 천천히 도착
-    5. beginFromCurrentState: animation이 취소되거나 계속 반복되거나할 때 현재 상태에서 애니메이션이 실행되도록 함
-    6. autoreverse: animation이 동작하 방향과 반대로 작동함
-    7. repeat: animation이 계속적으로 반복
+    - curveLinear: 처음부터 끝까지 동일한 속도, motion으로 실행
+    - curveEaseIn: 천천히 출발해서 빠르게 도착
+    - curveEaseOut: 빠르게 출발해서 천천히 도착
+    - curveEaseInOut: 기본값, 천천히 출발해서 빨라지다가 천천히 도착
+    - beginFromCurrentState: animation이 취소되거나 계속 반복되거나할 때 현재 상태에서 애니메이션이 실행되도록 함
+    - autoreverse: animation이 동작하 방향과 반대로 작동함
+    - repeat: animation이 계속적으로 반복
   - completion: animation 실행 후 Bool값 반환
 
   
@@ -113,13 +114,14 @@
   ```
 
   - options: transition 효과 적용
-    1. transitionCrossDissolve: Fade In-Out 효과
-    2. transitionFlipFromTop: 위로 뒤집는 효과
-    3. transitionFlipFromLeft: 왼쪽으로 뒤집는 효과
-    4. transitionFlipFromRight: 오른쪽으로 뒤집는 효과
-    5. transitionFlipFromBottom: 아래로 뒤집는 효과
-    6. transitionCurlUp: 위로 말려 올라가는 효과
-    7. transitionCurlDown: 아래로 말려 내려가는 효과
+    - transitionCrossDissolve: Fade In-Out 효과
+    - transitionFlipFromTop: 위로 뒤집는 효과
+    - transitionFlipFromLeft: 왼쪽으로 뒤집는 효과
+    - transitionFlipFromRight: 오른쪽으로 뒤집는 효과
+    - transitionFlipFromBottom: 아래로 뒤집는 효과
+    - transitionCurlUp: 위로 말려 올라가는 효과
+    - transitionCurlDown: 아래로 말려 내려가는 효과
+
 
 ### UIActivityIndicatorView
 
