@@ -9,20 +9,20 @@
 
 ## Swift
 
- - [스위프트를 공부합시다.⬅️(Detail)](https://github.com/wydryd125/TIL/tree/master/swift)
+ - [스위프트를 공부합시다.⬅️](https://github.com/wydryd125/TIL/tree/master/swift)
 
 ## Project
 
- - [배운 것을 토대로 만들어봅시다.⬅️(Detail)](https://github.com/wydryd125/TIL/tree/master/Project)
+ - [배운 것을 토대로 만들어봅시다.⬅️](https://github.com/wydryd125/TIL/tree/master/Project)
 
 ## TEST
 
-- [TEST 풀이.⬅️(Detail)](https://github.com/wydryd125/TIL/tree/master/TEST)
+- [TEST 풀이.⬅️](https://github.com/wydryd125/TIL/tree/master/TEST)
 
 
 ## Markdown
 
- - [Markdown 문법을 공부합시다.⬅️(Detail)](https://github.com/wydryd125/TIL/tree/master/Markdown)
+ - [Markdown 문법을 공부합시다.⬅️](https://github.com/wydryd125/TIL/tree/master/Markdown)
 
 
 
